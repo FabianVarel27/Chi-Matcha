@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="blue">#0000FF</color>
+    <color name="matcha_deep">#2D5016</color>
+    <color name="red">#FF0000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="yellow">#F0E76F</color>
+    <color name="bg_EditText">#F5F0E8</color>
+    <color name="button">#4A7C2F</color>
+    <color name="background">#FEFDF8</color>
+    <color name="btn_nonAktif">#C8E6B2</color>
+
+
+
+</resources>

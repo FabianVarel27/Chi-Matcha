@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BranchActivity"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/navbar"
+        app:layout_constraintTop_toTopOf="parent">
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="@drawable/bgnavbar"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="&lt;-"
+            android:textColor="@color/btn_nonAktif"
+            android:textSize="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_centerVertical="true"/>
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/profile2"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"/>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        app:layout_constraintTop_toBottomOf="@id/navbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="20dp"
+            android:padding="10dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="167dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/matcha1"
+                android:id="@+id/img"/>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:id="@+id/name"
+                    android:layout_height="wrap_content"
+                    android:text="Matcha Latte"
+                    android:fontFamily="sans-serif-black"
+                    android:textSize="25dp"
+                    android:layout_centerVertical="true"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rp. 20000"
+                    android:textSize="18dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"/>
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/description"
+                android:text="Experience the ultimate mindful ritual with our signature iced ceremonial matcha. Whisked to perfection with stone-ground Japanese tencha and topped with a cloud of silky micro-foam."
+                android:layout_marginTop="10dp"
+                android:justificationMode="inter_word"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ice"
+                android:layout_marginTop="20dp"/>
+
+            <AutoCompleteTextView
+                android:id="@+id/dropdownIce"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:inputType="none"
+                android:hint="Select Ice Level"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sugar"
+                android:layout_marginTop="20dp"/>
+
+            <AutoCompleteTextView
+                android:id="@+id/dropdownSugar"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="Select Sugar Level"
+                android:inputType="none"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Quantity"
+                android:layout_marginTop="20dp"/>
+
+            <EditText
+                android:id="@+id/etQuantity"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:inputType="number"
+                android:hint="e.g., 2"
+                android:background="@color/white"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Notes"
+                android:layout_marginTop="10dp"/>
+
+            <EditText
+                android:id="@+id/etNotes"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:inputType="text"
+                android:textSize="18dp"
+                android:padding="20dp"
+                android:hint="(e.g., Oat Milk substitute)"
+                android:background="@color/white"/>
+
+            <Button
+                android:id="@+id/btnSubmit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="SUBMIT"
+                android:backgroundTint="@color/button"
+                android:layout_margin="20dp"/>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rectangle_rounded"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_margin="20dp"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:gravity="center">
+
+        <ImageButton
+            android:id="@+id/btnHome"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/homelogo"
+            android:layout_marginHorizontal="40dp"
+            android:contentDescription="Home Button"/>
+
+        <ImageButton
+            android:id="@+id/btnMarket"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/market"
+            android:layout_marginHorizontal="40dp"
+            android:contentDescription="Market Button"/>
+
+        <ImageButton
+            android:id="@+id/btnLocation"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/branchlogo"
+            android:layout_marginHorizontal="40dp"
+            android:contentDescription="Branch Button"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
